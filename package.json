@@ -1,0 +1,31 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "Complete a survey and see what character you are.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shoka25/FriendFinder.git"
+  },
+  "keywords": [
+    "hunterxhunter",
+    "survey",
+    "express"
+  ],
+  "author": "John van der Hagen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shoka25/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/Shoka25/FriendFinder#readme"
+}
