@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Survey Says</title>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+
+</head>
+
+<body>
+	<main>
+		<br>
+		<div class="container">
+			<div class="row">
+				<div>
+					<div>
+						<h1 class="center">Which Hunter x Hunter character are you: </h1>
+						<div class="input-field">
+							<div>Name:</div>
+							<i></i>
+							<input type="text" class="validate" id="inputname">
+						</div>
+						<div class="input-field">
+							<div>Image Link: </div>
+							<i></i>
+							<input type="text" class="validate" id="inputimage">
+						</div>
+						<div class="input-field">
+							<div>Question 1</div>
+							<div>You value the lives of others.</div>
+							<select id="q1">
+								<option value="1">Strongly Disagree</option>
+								<option value="2">Disagree</option>
+								<option value="3">Neutral</option>
+								<option value="4">Agree</option>
+								<option value="5">Strongly Agree</option>
+							</select>
+						</div>
+						<div class="input-field">
+							<div>Question 2</div>
+							<div>You have a stable relationship with your family.</div>
+							<select id="q2">
+								<option value="1">Strongly Disagree</option>
+								<option value="2">Disagree</option>
+								<option value="3">Neutral</option>
+								<option value="4">Agree</option>
+								<option value="5">Strongly Agree</option>
+							</select>
+						</div>
+						<div class="input-field">
+							<div>Question 3</div>
+							<div>You are willing to die for what you believe.</div>
+							<select id="q3">
+								<option value="1">Strongly Disagree</option>
+								<option value="2">Disagree</option>
+								<option value="3">Neutral</option>
+								<option value="4">Agree</option>
+								<option value="5">Strongly Agree</option>
+							</select>
+						</div>
+						<div class="input-field">
+							<div>Question 4</div>
+							<div>You are willing to kill for what you believe.</div>
+							<select id="q4">
+								<option value="1">Strongly Disagree</option>
+								<option value="2">Disagree</option>
+								<option value="3">Neutral</option>
+								<option value="4">Agree</option>
+								<option value="5">Strongly Agree</option>
+							</select>
+						</div>
+						<div class="input-field">
+							<div>Question 5</div>
+							<div>You have make close friends easily.</div>
+							<select id="q5">
+								<option value="1">Strongly Disagree</option>
+								<option value="2">Disagree</option>
+								<option value="3">Neutral</option>
+								<option value="4">Agree</option>
+								<option value="5">Strongly Agree</option>
+							</select>
+						</div>
+						<div class="input-field">
+							<div>Question 6</div>
+							<div>You are close with nature.</div>
+							<select id="q6">
+								<option value="1">Strongly Disagree</option>
+								<option value="2">Disagree</option>
+								<option value="3">Neutral</option>
+								<option value="4">Agree</option>
+								<option value="5">Strongly Agree</option>
+							</select>
+						</div>
+						<div class="input-field">
+							<div>Question 7</div>
+							<div>You like going on adventures.</div>
+							<select id="q7">
+								<option value="1">Strongly Disagree</option>
+								<option value="2">Disagree</option>
+								<option value="3">Neutral</option>
+								<option value="4">Agree</option>
+								<option value="5">Strongly Agree</option>
+							</select>
+						</div>
+						<div class="input-field">
+							<div>Question 8</div>
+							<div>You value people based on how strong they are.</div>
+							<select id="q8">
+								<option value="1">Strongly Disagree</option>
+								<option value="2">Disagree</option>
+								<option value="3">Neutral</option>
+								<option value="4">Agree</option>
+								<option value="5">Strongly Agree</option>
+							</select>
+						</div>
+						<div class="input-field">
+							<div>Question 9</div>
+							<div>If a friend was in a fight you would join the fray.</div>
+							<select id="q9">
+								<option value="1">Strongly Disagree</option>
+								<option value="2">Disagree</option>
+								<option value="3">Neutral</option>
+								<option value="4">Agree</option>
+								<option value="5">Strongly Agree</option>
+							</select>
+						</div>
+						<div class="input-field">
+							<div>Question 10</div>
+							<div>You let emotions control your actions.</div>
+							<select id="q10">
+								<option value="1">Strongly Disagree</option>
+								<option value="2">Disagree</option>
+								<option value="3">Neutral</option>
+								<option value="4">Agree</option>
+								<option value="5">Strongly Agree</option>
+							</select>
+						</div>
+						<div>
+							<button class="btn" type="submit" name="action" id="submitButton">Submit
+								<i></i>
+							</button>
+							<br><br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+	<div id="modalid" class="modal">
+		<div class="modal-content">
+			<div>In Hunter x Hunter you are:</div>
+            <div id="name"></div>
+            <div id="result"></div>
+			<img id="image" class="materialboxed" width="450" src="">
+			
+		</div>
+		<div >
+			<a href="/survey" class="modal-action modal-close">Again?</a>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('select').material_select();
+			$('.modal').modal({
+				dismissible: false
+			});
+		});
+		$('#submitButton').on('click', function (event) {
+			event.preventDefault();
+			let Input = {
+				name: $('#inputname').val().trim(),
+				image: $('#inputimage').val().trim(),
+				choice: [
+					$('#q1').val().trim(),
+					$('#q2').val().trim(),
+					$('#q3').val().trim(),
+					$('#q4').val().trim(),
+					$('#q5').val().trim(),
+					$('#q6').val().trim(),
+					$('#q7').val().trim(),
+					$('#q8').val().trim(),
+					$('#q9').val().trim(),
+					$('#q10').val().trim()
+				]
+			};
+			$.post("/api/friends", Input)
+				.done(function (data) {
+					$("#name").html(data.name);
+					$("#image").attr("src", data.image);
+                    if(data.name === "Gon"){
+                        $("#result").html("You are a young prodigy with a big heart. How sweet :)");
+                    }
+                    else if(data.name === "Killua"){
+                        $("#result").html("You come from a family of assasins, and quickly become very powerful. Nice.");
+                    }
+                    else if(data.name === "Hisoka"){
+                        $("#result").html("You are a pyschopathic clown who enjoys nothing more than killing people for the fun of it. Relax.");
+                    }
+                    else if(data.name === "Meruem"){
+                        $("#result").html("You are an alien God king fighting for world dominance. Maybe chill a bit.");
+                    }
+					$('#modalid').modal('open');
+				});
+		});
+	</script>
+</body>
+
+</html>
